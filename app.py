@@ -9,9 +9,10 @@ with open('produtos.txt','r') as file:
         quantity = line.split(',')[1]
         price = line.split(',')[2]
         
-    # Defining variable settings: click, time and writing
-    # Click: cursor position coordinates through mouseinfo()
-    # Time: set to 100 milliseconds = 0.1 seconds interval between actions to be performed
+     # Defining variable settings: click, time and writing
+     # Click: cursor position coordinates through mouseinfo()
+     # Time(duration): set to 100 milliseconds = 0.1 seconds interval between actions to be performed
+     # Writing: the pyautogui.write(variable) function will write what it read from each comma-separated variable in the Produtos.txt file
         pyautogui.click(121,259, duration=0.1)
         pyautogui.write(product)
 
@@ -20,5 +21,5 @@ with open('produtos.txt','r') as file:
 
         pyautogui.click(119,312, duration=0.1)
         pyautogui.write(price)
-
+     # This last function is to define the coordinates of the registration button and click on this button
         pyautogui.click(47,468, duration=0.1)
